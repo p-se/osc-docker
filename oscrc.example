@@ -1,0 +1,12 @@
+[general]
+apiurl = https://api.opensuse.org
+
+[https://api.opensuse.org]
+email=pseidensal@suse.com
+trusted_prj=openSUSE:13.2 openSUSE:Factory devel:languages:perl openSUSE:Leap:42.1 openSUSE:Leap:15.1 openSUSE:Leap:15.1:Update openSUSE:Leap:15.2
+credentials_mgr_class=osc.credentials.PlaintextConfigFileCredentialsManager
+
+[https://api.suse.de]
+email=pseidensal@suse.com
+trusted_prj=SUSE:SLE-12:GA SUSE:SLE-12:Update SUSE:SLE-12:Update:Products:SES2 Devel:Storage:1.0:Staging SUSE:SLE-15:Update SUSE:SLE-15:GA SUSE:SLE-15-SP1:GA
+credentials_mgr_class=osc.credentials.PlaintextConfigFileCredentialsManager
