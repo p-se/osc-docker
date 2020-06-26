@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  osc:
+    build:
+      context: .
+      network: host
+    container_name: osc
+    entrypoint: zsh
+    tty: true
+    stdin_open: true
