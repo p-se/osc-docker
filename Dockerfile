@@ -17,12 +17,8 @@ RUN zypper --non-interactive install --no-recommends \
     zsh \
     sudo
 
-RUN useradd -m user \
-    && echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
-COPY oscrc /home/user/.oscrc
-COPY zshrc /home/user/.zshrc
-COPY vimrc /home/user/.vimrc
+RUN useradd -m user && \
+    echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 USER user
 WORKDIR /home/user
