@@ -6,6 +6,11 @@ services:
       context: .
       network: host
     container_name: osc
+    hostname: osc
     entrypoint: zsh
     tty: true
     stdin_open: true
+    volumes:
+      - type: bind
+        source: ./home
+        target: /home/user
