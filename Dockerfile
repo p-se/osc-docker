@@ -15,6 +15,7 @@ RUN zypper --non-interactive install --no-recommends \
     wget \
     vim \
     zsh \
+    libxslt-tools \
     sudo
 
 RUN useradd -m user && \
