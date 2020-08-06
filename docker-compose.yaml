@@ -1,16 +1,19 @@
 version: "3.4"
 
 services:
-  osc:
+  osc: &default
     build:
       context: .
       network: host
     container_name: osc
     hostname: osc
-    entrypoint: zsh
+    entrypoint: ['osc', '-A', 'https://build.opensuse.org']
     tty: true
     stdin_open: true
     volumes:
       - type: bind
-        source: ./home
+        source: .
         target: /home/user
+  isc:
+    <<: *default
+    entrypoint: ['osc', '-A', 'https://build.suse.de']

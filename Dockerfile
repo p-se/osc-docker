@@ -1,5 +1,7 @@
 FROM opensuse/leap:15.2
 
+ENTRYPOINT osc
+
 RUN zypper ref
 
 RUN zypper addrepo http://download.suse.de/ibs/SUSE:/CA/openSUSE_Leap_15.1/SUSE:CA.repo && \
@@ -30,4 +32,3 @@ RUN useradd -m user && \
 USER user
 WORKDIR /home/user
 
-RUN zsh
