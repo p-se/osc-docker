@@ -1,1 +1,9 @@
 oscrc
+.osc_cookiejar
+.viminfo
+.vimrc
+.zcompdump
+.zsh_history
+.zshrc
+.config/
+home:*/
